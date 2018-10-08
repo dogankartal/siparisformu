@@ -283,6 +283,7 @@ function finishStep(wizard, state)
     {
         currentStep.addClass("done").removeClass("error");
         wizard.triggerHandler("finished", [state.currentIndex]);
+        console.log("burasý bitiþ");
     }
     else
     {
@@ -1359,6 +1360,7 @@ $.fn.steps.destroy = function ()
 $.fn.steps.finish = function ()
 {
     finishStep(this, getState(this));
+   
 };
 
 /**
