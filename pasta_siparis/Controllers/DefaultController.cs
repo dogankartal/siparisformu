@@ -23,9 +23,9 @@ namespace pasta_siparis.Controllers
 
             if (GelenSiparis != null)
             {
-                bildirim.SendEmail("Metin"); 
+                bildirim.SendEmail("Metin");
             }
-           return View();
+           return Content("<script src='https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js'></script> <body> <script language='javascript' type='text/javascript'>swal('Başarılı!','En kısa sürede yanıt vereceğim.','success').then(() => { window.location.href = '/Default' }); </script></body>");
         }
     }
 }
