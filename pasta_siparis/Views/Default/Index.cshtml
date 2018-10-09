@@ -1,4 +1,4 @@
-﻿
+﻿@model pasta_siparis.Models.Siparis
 @{
     Layout = null;
 }
@@ -38,7 +38,7 @@
                     <h3>Ön Sipariş Formu</h3>
                 </div>
                 <div id="wizard">
-                    @using (Html.BeginForm(null, null, FormMethod.Post, new { action = "Default/Index" }))
+                    @using (Html.BeginForm("Index", "Default", FormMethod.Post))
                     {
                         <!-- SECTION 1 -->
                         <h4></h4>
@@ -163,7 +163,7 @@
                                         Adet (Mininum 20):
                                     </label>
                                     <div class="form-holder">
-                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control" name="@Convert.ToInt32(Model.kurabiye.Kurabiye_Adet);">
                                     </div>
                                 </div><br />
                             </div>

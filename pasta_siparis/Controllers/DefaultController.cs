@@ -13,13 +13,14 @@ namespace pasta_siparis.Controllers
         // GET: Default
         public ActionResult Index()
         {
-            return View();
+            Siparis siparismodel = null;
+            return View(siparismodel);
         }
 
         [HttpPost]
-        public ActionResult Index(siparis GelenSiparis)
+        public ActionResult Index(Siparis GelenSiparis)
         {
-           SiparisBildirim bildirim = new SiparisBildirim();
+            SiparisBildirim bildirim = new SiparisBildirim();
 
             if (GelenSiparis != null)
             {
