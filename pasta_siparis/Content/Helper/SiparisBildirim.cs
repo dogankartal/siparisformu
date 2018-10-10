@@ -10,12 +10,11 @@ namespace pasta_siparis.Content.Helper
 {
     public class SiparisBildirim
     {
-        public bool MailFormSend(string body)
+        public bool MailFormSend(string body,string mail)
         {
             bool rtr = false;
             var fromAddress = new MailAddress("smtpmail@doabil.com");
-            var toAddress = new MailAddress("dogankartal52@gmail.com");
-            var toBccAddress = "doabil@yandex.com";
+            var toAddress = new MailAddress(mail);
             const string subject = "MagicMiks - Yeni Form Gönderildi!";
             using (var smtp = new SmtpClient
             {
@@ -33,7 +32,6 @@ namespace pasta_siparis.Content.Helper
 
                     using (var message = new MailMessage(fromAddress, toAddress) { Subject = subject, Body = body })
                     {
-                        message.Bcc.Add(new MailAddress(toBccAddress));
                         smtp.Send(message);
                         rtr = true;
                     }
