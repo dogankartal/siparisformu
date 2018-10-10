@@ -79,12 +79,12 @@ namespace pasta_siparis.Controllers
                 bildirim.MailFormSend(body.ToString());
 
 
-                var smsBody = new StringBuilder();
-                smsBody.AppendLine("Yeni bir " + GelenSiparis.SiparisTuru.ToUpper() + " siparişin var!");
-                smsBody.AppendLine(" AD: " + GelenSiparis.AdSoyad);
-                smsBody.AppendLine(" TEL: " + GelenSiparis.TelefonNumarasi);
+                //var smsBody = new StringBuilder();
+                //smsBody.AppendLine("Yeni bir " + GelenSiparis.SiparisTuru.ToUpper() + " siparişin var!");
+                //smsBody.AppendLine(" AD: " + GelenSiparis.AdSoyad);
+                //smsBody.AppendLine(" TEL: " + GelenSiparis.TelefonNumarasi);
 
-                bildirim.SendSMS(smsBody.ToString());
+                //bildirim.SendSMS(smsBody.ToString());
 
                 rtr = "Success!";
             }
