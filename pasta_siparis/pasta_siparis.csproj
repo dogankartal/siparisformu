@@ -104,33 +104,6 @@
     <Content Include="Content\colorlib-wizard-4\vendor\date-picker\css\datepicker.min.css" />
     <Content Include="Content\colorlib-wizard-4\vendor\date-picker\js\datepicker.en.js" />
     <Content Include="Content\colorlib-wizard-4\vendor\date-picker\js\datepicker.js" />
-    <Content Include="Content\colorlib-wizard-6\css\style.css" />
-    <Content Include="Content\colorlib-wizard-6\fonts\material-design-iconic-font\css\material-design-iconic-font.css" />
-    <Content Include="Content\colorlib-wizard-6\fonts\material-design-iconic-font\css\material-design-iconic-font.min.css" />
-    <Content Include="Content\colorlib-wizard-6\fonts\material-design-iconic-font\fonts\Material-Design-Iconic-Font.svg" />
-    <Content Include="Content\colorlib-wizard-6\fonts\muli\OFL.txt" />
-    <Content Include="Content\colorlib-wizard-6\fonts\poppins\OFL.txt" />
-    <Content Include="Content\colorlib-wizard-6\images\artist-bg.jpg" />
-    <Content Include="Content\colorlib-wizard-6\images\artist.png" />
-    <Content Include="Content\colorlib-wizard-6\images\avartar.png" />
-    <Content Include="Content\colorlib-wizard-6\images\business-bg.jpg" />
-    <Content Include="Content\colorlib-wizard-6\images\business.png" />
-    <Content Include="Content\colorlib-wizard-6\images\form-wizard-bg.jpg" />
-    <Content Include="Content\colorlib-wizard-6\images\map-marker.png" />
-    <Content Include="Content\colorlib-wizard-6\images\programming-bg.jpg" />
-    <Content Include="Content\colorlib-wizard-6\images\programming.png" />
-    <Content Include="Content\colorlib-wizard-6\images\research-bg.jpg" />
-    <Content Include="Content\colorlib-wizard-6\images\research.png" />
-    <Content Include="Content\colorlib-wizard-6\images\teacher-bg.jpg" />
-    <Content Include="Content\colorlib-wizard-6\images\teacher.png" />
-    <Content Include="Content\colorlib-wizard-6\images\tour-guide-bg.jpg" />
-    <Content Include="Content\colorlib-wizard-6\images\tour-guide.png" />
-    <Content Include="Content\colorlib-wizard-6\index.html" />
-    <Content Include="Content\colorlib-wizard-6\js\jquery-3.3.1.min.js" />
-    <Content Include="Content\colorlib-wizard-6\js\jquery.steps.js" />
-    <Content Include="Content\colorlib-wizard-6\js\main.js" />
-    <Content Include="Content\colorlib-wizard-6\js\theme-map.js" />
-    <Content Include="Content\colorlib-wizard-6\readme.txt" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -147,44 +120,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
-    <Content Include="Content\colorlib-wizard-6\css\style.css.map" />
-    <Content Include="Content\colorlib-wizard-6\css\style.scss" />
-    <Content Include="Content\colorlib-wizard-6\fonts\material-design-iconic-font\fonts\Material-Design-Iconic-Font.eot" />
-    <Content Include="Content\colorlib-wizard-6\fonts\material-design-iconic-font\fonts\Material-Design-Iconic-Font.ttf" />
-    <Content Include="Content\colorlib-wizard-6\fonts\material-design-iconic-font\fonts\Material-Design-Iconic-Font.woff" />
-    <Content Include="Content\colorlib-wizard-6\fonts\material-design-iconic-font\fonts\Material-Design-Iconic-Font.woff2" />
-    <Content Include="Content\colorlib-wizard-6\fonts\muli\Muli-Black.ttf" />
-    <Content Include="Content\colorlib-wizard-6\fonts\muli\Muli-BlackItalic.ttf" />
-    <Content Include="Content\colorlib-wizard-6\fonts\muli\Muli-Bold.ttf" />
-    <Content Include="Content\colorlib-wizard-6\fonts\muli\Muli-BoldItalic.ttf" />
-    <Content Include="Content\colorlib-wizard-6\fonts\muli\Muli-ExtraBold.ttf" />
-    <Content Include="Content\colorlib-wizard-6\fonts\muli\Muli-ExtraBoldItalic.ttf" />
-    <Content Include="Content\colorlib-wizard-6\fonts\muli\Muli-ExtraLight.ttf" />
-    <Content Include="Content\colorlib-wizard-6\fonts\muli\Muli-ExtraLightItalic.ttf" />
-    <Content Include="Content\colorlib-wizard-6\fonts\muli\Muli-Italic.ttf" />
-    <Content Include="Content\colorlib-wizard-6\fonts\muli\Muli-Light.ttf" />
-    <Content Include="Content\colorlib-wizard-6\fonts\muli\Muli-LightItalic.ttf" />
-    <Content Include="Content\colorlib-wizard-6\fonts\muli\Muli-Regular.ttf" />
-    <Content Include="Content\colorlib-wizard-6\fonts\muli\Muli-SemiBold.ttf" />
-    <Content Include="Content\colorlib-wizard-6\fonts\muli\Muli-SemiBoldItalic.ttf" />
-    <Content Include="Content\colorlib-wizard-6\fonts\poppins\Poppins-Black.ttf" />
-    <Content Include="Content\colorlib-wizard-6\fonts\poppins\Poppins-BlackItalic.ttf" />
-    <Content Include="Content\colorlib-wizard-6\fonts\poppins\Poppins-Bold.ttf" />
-    <Content Include="Content\colorlib-wizard-6\fonts\poppins\Poppins-BoldItalic.ttf" />
-    <Content Include="Content\colorlib-wizard-6\fonts\poppins\Poppins-ExtraBold.ttf" />
-    <Content Include="Content\colorlib-wizard-6\fonts\poppins\Poppins-ExtraBoldItalic.ttf" />
-    <Content Include="Content\colorlib-wizard-6\fonts\poppins\Poppins-ExtraLight.ttf" />
-    <Content Include="Content\colorlib-wizard-6\fonts\poppins\Poppins-ExtraLightItalic.ttf" />
-    <Content Include="Content\colorlib-wizard-6\fonts\poppins\Poppins-Italic.ttf" />
-    <Content Include="Content\colorlib-wizard-6\fonts\poppins\Poppins-Light.ttf" />
-    <Content Include="Content\colorlib-wizard-6\fonts\poppins\Poppins-LightItalic.ttf" />
-    <Content Include="Content\colorlib-wizard-6\fonts\poppins\Poppins-Medium.ttf" />
-    <Content Include="Content\colorlib-wizard-6\fonts\poppins\Poppins-MediumItalic.ttf" />
-    <Content Include="Content\colorlib-wizard-6\fonts\poppins\Poppins-Regular.ttf" />
-    <Content Include="Content\colorlib-wizard-6\fonts\poppins\Poppins-SemiBold.ttf" />
-    <Content Include="Content\colorlib-wizard-6\fonts\poppins\Poppins-SemiBoldItalic.ttf" />
-    <Content Include="Content\colorlib-wizard-6\fonts\poppins\Poppins-Thin.ttf" />
-    <Content Include="Content\colorlib-wizard-6\fonts\poppins\Poppins-ThinItalic.ttf" />
     <Content Include="Content\colorlib-wizard-4\css\style.css.map" />
     <Content Include="Content\colorlib-wizard-4\css\style.scss" />
     <Content Include="Content\colorlib-wizard-4\fonts\material-design-iconic-font\fonts\Material-Design-Iconic-Font.eot" />
@@ -225,6 +160,7 @@
     <Content Include="Content\colorlib-wizard-4\fonts\poppins\Poppins-ThinItalic.ttf" />
     <None Include="packages.config" />
     <Content Include="Views\Default\Index.cshtml" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
