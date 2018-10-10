@@ -34,7 +34,7 @@
         </div>
         <form action="Index" method="post">
             <div class="form-header">
-                <a href="https://instagram.com/ascilikseruvenim" target="_blank">#Aşçılık Serüvenim</a>
+                <a href="https://www.instagram.com/magicmiks.cake/" target="_blank">#Magic Miks</a>
                 <h3>Ön Sipariş Formu</h3>
             </div>
             <div id="wizard">
@@ -168,70 +168,119 @@
                             </div><br />
                         </div>
 
-                    </section>
-
-                    <!-- SECTION 2 -->
-                    @*<h4></h4>
-                        <section id="pasta" visible="false">
+                        <div id="secildiPasta" style="display:block">
                             <div class="form-row">
                                 <label for="">
-                                    Date of Birth:
+                                    Kaç Kişilik? :
                                 </label>
                                 <div class="form-holder">
-                                    <input type="text" class="form-control datepicker-here" data-language='en' data-date-format="dd - mm - yyyy" id="dp1">
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <label for="">
-                                    Country of Birth:
-                                </label>
-                                <div class="form-holder">
-                                    <select name="" id="" class="form-control">
-                                        <option value="united states" class="option">United States</option>
-                                        <option value="united kingdom" class="option">United Kingdom</option>
-                                        <option value="viet nam" class="option">Viet Nam</option>
+                                    <select id="pastaKisiSecimi" class="form-control">
+                                        <option value="8-10 Kişilik" class="option">8-10 Kişilik</option>
+                                        <option value="12-15 Kişilik" class="option">12-15 Kişilik</option>
+                                        <option value="18-20 Kişilik" class="option">18-20 Kişilik</option>
+                                        <option value="25-30 Kişilik" class="option">25-30 Kişilik</option>
+                                        <option value="30+" class="option">30+</option>
                                     </select>
                                     <i class="zmdi zmdi-caret-down"></i>
                                 </div>
                             </div>
                             <div class="form-row">
                                 <label for="">
-                                    Your Email:
+                                    Hamur Seçimi:
                                 </label>
                                 <div class="form-holder">
-                                    <input type="text" class="form-control">
+                                    <select id="pastaHamurSecimi" class="form-control">
+                                        <option value="Sade Hamur" class="option">Sade Hamur</option>
+                                        <option value="Kakaolu Hamur" class="option">Kakaolu Hamur</option>
+                                        <option value="Red Velvet Hamur" class="option">Red Velvet Hamur</option>
+                                    </select>
+                                    <i class="zmdi zmdi-caret-down"></i>
                                 </div>
                             </div>
-                            <div class="form-row" style="margin-bottom: 3.4vh">
+                            <div class="form-row">
                                 <label for="">
-                                    Phone Number:
+                                    Süsleme Seçimi:
                                 </label>
                                 <div class="form-holder">
-                                    <input type="text" class="form-control">
+                                    <select id="pastaSuslemeSecimi" class="form-control">
+                                        <option value="Baskı Süsleme" class="option">Baskı Süsleme</option>
+                                        <option value="Çiçek Süsleme" class="option">Çiçek Süsleme</option>
+                                        <option value="Meyve Süsleme" class="option">Meyve Süsleme</option>
+                                    </select>
+                                    <i class="zmdi zmdi-caret-down"></i>
                                 </div>
-                            </div>
-                            <div class="form-row" style="margin-bottom: 50px;">
+                            </div><br />
+                        </div>
+
+                        <div id="secildiCupcake" style="display:none">
+                            <div class="form-row">
                                 <label for="">
-                                    Gender:
+                                    Cupcake:
                                 </label>
                                 <div class="form-holder">
-                                    <div class="checkbox-circle">
-                                        <label class="male">
-                                            <input type="radio" name="gender" value="male" checked> Male<br>
-                                            <span class="checkmark"></span>
-                                        </label>
-                                        <label class="female">
-                                            <input type="radio" name="gender" value="female"> Female<br>
-                                            <span class="checkmark"></span>
-                                        </label>
-                                        <label>
-                                            <input type="radio" name="gender" value="transgender">Transgender<br>
-                                            <span class="checkmark"></span>
-                                        </label>
-                                    </div>
+                                    <select id="CupCakeSecimi" class="form-control">
+                                        <option value="Krema Hamurlu" class="option">Krema Hamurlu</option>
+                                        <option value="Şeker Hamurlu" class="option">Şeker Hamurlu</option>
+                                    </select>
+                                    <i class="zmdi zmdi-caret-down"></i>
                                 </div>
                             </div>
-                        </section>*@
+                            <div class="form-row">
+                                <label for="">
+                                    Hamur Seçimi:
+                                </label>
+                                <div class="form-holder">
+                                    <select id="CupCakeHamurSecimi" class="form-control">
+                                        <option value="Sade" class="option">Sade</option>
+                                        <option value="Çikolatalı" class="option">Çikolatalı</option>
+                                    </select>
+                                    <i class="zmdi zmdi-caret-down"></i>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <label for="">
+                                    Süsleme Seçimi:
+                                </label>
+                                <div class="form-holder">
+                                    <select id="CupCakeSuslemeSecimi" class="form-control">
+                                        <option value="Şeker Hamuru" class="option">Şeker Hamuru</option>
+                                        <option value="Sos" class="option">Sos</option>
+                                        <option value="Meyve" class="option">Meyve</option>
+                                        <option value="Sprinkles" class="option">Sprinkles</option>
+                                    </select>
+                                    <i class="zmdi zmdi-caret-down"></i>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <label for="">
+                                    İç Dolgusu:
+                                </label>
+                                <div class="form-holder">
+                                    <select id="CupCakeIcDolgusuSecimi" class="form-control">
+                                        <option value="Dolgusuz" class="option">Dolgusuz</option>
+                                        <option value="Çikolata" class="option">Çikolata</option>
+                                        <option value="Meyve" class="option">Meyve</option>
+                                    </select>
+                                    <i class="zmdi zmdi-caret-down"></i>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <label for="">
+                                    Kreması:
+                                </label>
+                                <div class="form-holder">
+                                    <select id="CupCakeKremaSecimi" class="form-control">
+                                        <option value="Şanti" class="option">Şanti</option>
+                                        <option value="Butter Cream" class="option">Butter Cream</option>
+                                        <option value="Ganaj" class="option">Ganaj</option>
+                                    </select>
+                                    <i class="zmdi zmdi-caret-down"></i>
+                                </div>
+                            </div>
+                            <br />
+                        </div>
+
+                    </section>
 
                     <!-- TAMAMLAMA -->
                     <h4></h4>
@@ -246,7 +295,6 @@
                                 Notunuz:
                             </label>
                             <div class="form-holder">
-                                @*<textarea class="form-control" rows="10" placeholder="Seçiminizi yaptığınız işlemlerle ilgili not yazabilirsiniz."></textarea>*@
                                 <input type="text" class="form-control" placeholder="Not" name="not">
                             </div>
 
@@ -269,9 +317,6 @@
     <script src="~/Content/colorlib-wizard-4/js/main.js"></script>
     <!-- Template created and distributed by Colorlib -->
 
-
-
-
     <script>
 
         function AddToCart() {
@@ -282,13 +327,31 @@
                 Kurabiye_Adet: parseInt(document.querySelector('input[name=kurabiyeadet_]').value)
             };
 
-        var tmpObj = {
-        AdSoyad: document.querySelector('input[name=AdSoyad]').value,
-            TelefonNumarasi: document.querySelector('input[name=TelefonNumarasi]').value,
-            SiparisTuru: document.getElementById("tipSecimi").value,
-            Not: document.querySelector('input[name=not]').value,
-            kurabiye: kurabiye
-        };
+            var pasta = {
+                KisiSayisi: document.getElementById("pastaKisiSecimi").value, 
+                HamurSecimi: document.getElementById("pastaHamurSecimi").value,
+                Susleme: document.getElementById("pastaSuslemeSecimi").value
+            };
+
+            var cupcake = {
+                
+                Turu: document.getElementById("CupCakeSecimi").value,
+                HamurSecimi: document.getElementById("CupCakeHamurSecimi").value,
+                IcDolgusu: document.getElementById("CupCakeIcDolgusuSecimi").value,
+                Kremasi: document.getElementById("CupCakeKremaSecimi").value,
+                Susleme: document.getElementById("CupCakeSuslemeSecimi").value
+            };
+
+
+            var tmpObj = {
+                 AdSoyad: document.querySelector('input[name=AdSoyad]').value,
+                TelefonNumarasi: document.querySelector('input[name=TelefonNumarasi]').value,
+                SiparisTuru: document.getElementById("tipSecimi").value,
+                Not: document.querySelector('input[name=not]').value,
+                kurabiye: kurabiye,
+                cupcake: cupcake,
+                pasta: pasta
+            };
 
             var req = new XMLHttpRequest();
             req.responseType = "json";
@@ -304,53 +367,39 @@
             };
 }
 
-   //     function AddToCart(adsoyad, telefon) {
-   //         var data = {
-   //             adsoyad: 'adsdasdasd',
-   //             telefon: '12321321312321213'
-   //         };
-
-   //         $.ajax({
-   //             type: "GET",
-   //             url: "AddOrder",
-   //             content: "application/json;",
-   //             dataType: "json",
-   //             data: JSON.stringify(data),
-   //             success: function (d) {
-
-   //             },
-   //             error: function (xhr, textStatus, errorThrown) {
-
-   //             }
-   //         });
-   //}
-    </script>
-
-    <script>
-        //$(document).ready(function () {
-        //    console.log("ready!");
-        //    swal(
-        //        'Başarılı!',
-        //        'En kısa sürede yanıt vereceğim.',
-        //        'success'
-        //    ).then(() => {
-        //        $(location).attr('href', '/Default');
-        //        });
-        //});
-
-
-
         function tipDegisti() {
             var x = document.getElementById("tipSecimi").value;
             console.log(x);
 
             if (x === 'pasta') {
-                alert('Seçiminiz: ' + x);
+                var j = document.getElementById("secildiKurabiye");
+                j.style.display = "none";
+                var k = document.getElementById("secildiCupcake");
+                k.style.display = "none";
+                var b = document.getElementById("secildiPasta");
+                if (b.style.display === "none") {
+                    b.style.display = "block";
+                } else {
+                    b.style.display = "none";
+                }
             }
             else if (x === 'cupcake') {
-                alert('Seçiminiz: ' + x);
+                var d = document.getElementById("secildiPasta");
+                d.style.display = "none";
+                var f = document.getElementById("secildiKurabiye");
+                f.style.display = "none";
+                var c = document.getElementById("secildiCupcake");
+                if (c.style.display === "none") {
+                    c.style.display = "block";
+                } else {
+                    c.style.display = "none";
+                }
             }
             else if (x === 'kurabiye') {
+                var h = document.getElementById("secildiPasta");
+                h.style.display = "none";
+                var i = document.getElementById("secildiCupcake");
+                i.style.display = "none";
                 var y = document.getElementById("secildiKurabiye");
                 if (y.style.display === "none") {
                     y.style.display = "block";
