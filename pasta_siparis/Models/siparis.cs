@@ -9,6 +9,7 @@ namespace pasta_siparis.Models
     {
         public string AdSoyad { get; set; }
         public string TelefonNumarasi { get; set; }
+        public string SiparisTuru { get; set; }
         public Kurabiye_siparisi kurabiye { get; set; }
         public Paasta_siparisi Pasta { get; set; }
         public Cupcake_siparisi Cupcake { get; set; }
@@ -19,7 +20,6 @@ namespace pasta_siparis.Models
     public class Kurabiye_siparisi
     {
         
-        public string SiparisTuru { get; set; }
         public string HamurSecimi { get; set; }
         public string SuslemeSecimi { get; set; }
         public int Kurabiye_Adet { get; set; }
@@ -29,7 +29,6 @@ namespace pasta_siparis.Models
     public class Paasta_siparisi
     {
       
-        public string SiparisTuru { get; set; }
         public string HamurSecimi { get; set; }
         public string SuslemeSecimi { get; set; }
         public int Adet { get; set; }
@@ -38,7 +37,6 @@ namespace pasta_siparis.Models
 
     public class Cupcake_siparisi
     {
-        public string SiparisTuru { get; set; }
         public string HamurSecimi { get; set; }
         public string SuslemeSecimi { get; set; }
         public int Adet { get; set; }

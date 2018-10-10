@@ -284,7 +284,8 @@ function finishStep(wizard, state)
         currentStep.addClass("done").removeClass("error");
         wizard.triggerHandler("finished", [state.currentIndex]);
         console.log("burasý bitiþ");
-        document.forms[0].submit();
+        //document.forms[0].submit();
+        AddToCart();
     }
     else
     {

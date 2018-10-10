@@ -27,283 +27,340 @@
 
 </head>
 <body>
-   
-        <div class="wrapper">
-            <div class="image-holder">
-                <img src="~/Content/colorlib-wizard-4/images/form-wizard.png" alt="">
+
+    <div class="wrapper">
+        <div class="image-holder">
+            <img src="~/Content/colorlib-wizard-4/images/form-wizard.png" alt="">
+        </div>
+        <form action="Index" method="post">
+            <div class="form-header">
+                <a href="https://instagram.com/ascilikseruvenim" target="_blank">#Aşçılık Serüvenim</a>
+                <h3>Ön Sipariş Formu</h3>
             </div>
-            <form action="Index" method="post">
-                <div class="form-header">
-                    <a href="https://instagram.com/ascilikseruvenim" target="_blank">#Aşçılık Serüvenim</a>
-                    <h3>Ön Sipariş Formu</h3>
-                </div>
-                <div id="wizard">
-                    @using (Html.BeginForm("Index", "Default", FormMethod.Post))
-                    {
-                        <!-- SECTION 1 -->
-                        <h4></h4>
-                        <section>
-                            <div class="form-row">
-                                <label for="">
-                                    Ad Soyad:
-                                </label>
-                                <div class="form-holder">
-                                    <input type="text" class="form-control" name="AdSoyad">
-                                </div>
+            <div id="wizard">
+                @using (Html.BeginForm("Index", "Default", FormMethod.Post))
+                {
+                    <!-- SECTION 1 -->
+                    <h4></h4>
+                    <section>
+                        <div class="form-row">
+                            <label for="">
+                                Ad Soyad:
+                            </label>
+                            <div class="form-holder">
+                                <input type="text" class="form-control" name="AdSoyad">
                             </div>
-                            <div class="form-row">
-                                <label for="">
-                                    Telefon Numarası:
-                                </label>
-                                <div class="form-holder">
-                                    <input type="text" class="form-control" name="TelefonNumarasi">
-                                </div>
+                        </div>
+                        <div class="form-row">
+                            <label for="">
+                                Telefon Numarası:
+                            </label>
+                            <div class="form-holder">
+                                <input type="text" class="form-control" name="TelefonNumarasi">
                             </div>
-                            <div class="form-row">
+                        </div>
+                        <div class="form-row">
+                            <label for="">
+                                Siparişiniz:
+                            </label>
+                            <div class="form-holder">
+                                <select id="tipSecimi" class="form-control" onchange="tipDegisti()">
+                                    <option value="pasta" class="option">Pasta</option>
+                                    <option value="cupcake" class="option">Cupcake</option>
+                                    <option value="kurabiye" class="option">Kurabiye</option>
+                                </select>
+                                <i class="zmdi zmdi-caret-down"></i>
+                            </div>
+                        </div>
+                        @*<div class="form-row" style="margin-bottom: 26px;">
                                 <label for="">
-                                    Siparişiniz:
+                                    Is this course for UF Online?
                                 </label>
                                 <div class="form-holder">
-                                    <select id="tipSecimi" class="form-control" onchange="tipDegisti()">
-                                        <option value="pasta" class="option">Pasta</option>
-                                        <option value="cupcake" class="option">Cupcake</option>
-                                        <option value="kurabiye" class="option">Kurabiye</option>
+                                    <select name="" id="" class="form-control">
+                                        <option value="no" class="option">No</option>
+                                        <option value="yes" class="option">Yes</option>
                                     </select>
                                     <i class="zmdi zmdi-caret-down"></i>
                                 </div>
                             </div>
-                            @*<div class="form-row" style="margin-bottom: 26px;">
-                    <label for="">
-                        Is this course for UF Online?
-                    </label>
-                    <div class="form-holder">
-                        <select name="" id="" class="form-control">
-                            <option value="no" class="option">No</option>
-                            <option value="yes" class="option">Yes</option>
-                        </select>
-                        <i class="zmdi zmdi-caret-down"></i>
-                    </div>
-                </div>
-                <div class="form-row">
-                    <label for="">
-                        Preferred System:
-                    </label>
-                    <div class="form-holder">
-                        <select name="" id="" class="form-control">
-                            <option value="canvas" class="option">Canvas</option>
-                            <option value="svg" class="option">Svg</option>
-                        </select>
-                        <i class="zmdi zmdi-caret-down"></i>
-                    </div>
-                </div>
-                <div class="form-row">
-                    <label for="">
-                        College / Department:
-                    </label>
-                    <div class="form-holder">
-                        <select name="" id="" class="form-control">
-                            <option value="florida" class="option">University of Florida</option>
-                            <option value="havard" class="option">University of Havard</option>
-                            <option value="oxford" class="option">University of Oxford</option>
-                        </select>
-                        <i class="zmdi zmdi-caret-down"></i>
-                    </div>
-                </div>
-                <div class="form-row">
-                    <label for="">
-                        Term:
-                    </label>
-                    <div class="form-holder">
-                        <select name="" id="" class="form-control">
-                            <option value="" selected disabled>Select Term</option>
-                            <option value="term 1" class="option">Term 1</option>
-                            <option value="term 2" class="option">Term 2</option>
-                            <option value="term 3" class="option">Term 3</option>
-                        </select>
-                        <i class="zmdi zmdi-caret-down"></i>
-                    </div>
-                </div>*@
-
-                        </section>
-
-
-
-                        <!-- SİPARİŞ FORMU -->
-                        <h4></h4>
-                        <section>
-                            <div id="secildiKurabiye" style="display:none">
-                                <div class="form-row">
-                                    <label for="">
-                                        Hamur Seçimi:
-                                    </label>
-                                    <div class="form-holder">
-                                        <select id="kurabiyeHamurSecimi" class="form-control">
-                                            <option value="zencefilli" class="option">Zencefilli</option>
-                                            <option value="tarcinli" class="option">Tarçınlı</option>
-                                            <option value="vanilyali" class="option">Vanilyalı</option>
-                                        </select>
-                                        <i class="zmdi zmdi-caret-down"></i>
-                                    </div>
-                                </div>
-                                <div class="form-row">
-                                    <label for="">
-                                        Süsleme Seçimi:
-                                    </label>
-                                    <div class="form-holder">
-                                        <select id="kurabiyeHamurSecimi" class="form-control">
-                                            <option value="sekerbaski" class="option">Şeker Baskı</option>
-                                            <option value="royalicing" class="option">Royal Icing</option>
-                                            <option value="hikayekombini" class="option">Hikaye Kombini</option>
-                                        </select>
-                                        <i class="zmdi zmdi-caret-down"></i>
-                                    </div>
-                                </div>
-                                <div class="form-row">
-                                    <label for="">
-                                        Adet (Mininum 20):
-                                    </label>
-                                    <div class="form-holder">
-                                        <input type="text" class="form-control" name="@Convert.ToInt32(Model.kurabiye.Kurabiye_Adet);">
-                                    </div>
-                                </div><br />
-                            </div>
-
-                        </section>
-
-                        <!-- SECTION 2 -->
-                        @*<h4></h4>
-            <section id="pasta" visible="false">
-                <div class="form-row">
-                    <label for="">
-                        Date of Birth:
-                    </label>
-                    <div class="form-holder">
-                        <input type="text" class="form-control datepicker-here" data-language='en' data-date-format="dd - mm - yyyy" id="dp1">
-                    </div>
-                </div>
-                <div class="form-row">
-                    <label for="">
-                        Country of Birth:
-                    </label>
-                    <div class="form-holder">
-                        <select name="" id="" class="form-control">
-                            <option value="united states" class="option">United States</option>
-                            <option value="united kingdom" class="option">United Kingdom</option>
-                            <option value="viet nam" class="option">Viet Nam</option>
-                        </select>
-                        <i class="zmdi zmdi-caret-down"></i>
-                    </div>
-                </div>
-                <div class="form-row">
-                    <label for="">
-                        Your Email:
-                    </label>
-                    <div class="form-holder">
-                        <input type="text" class="form-control">
-                    </div>
-                </div>
-                <div class="form-row" style="margin-bottom: 3.4vh">
-                    <label for="">
-                        Phone Number:
-                    </label>
-                    <div class="form-holder">
-                        <input type="text" class="form-control">
-                    </div>
-                </div>
-                <div class="form-row" style="margin-bottom: 50px;">
-                    <label for="">
-                        Gender:
-                    </label>
-                    <div class="form-holder">
-                        <div class="checkbox-circle">
-                            <label class="male">
-                                <input type="radio" name="gender" value="male" checked> Male<br>
-                                <span class="checkmark"></span>
-                            </label>
-                            <label class="female">
-                                <input type="radio" name="gender" value="female"> Female<br>
-                                <span class="checkmark"></span>
-                            </label>
-                            <label>
-                                <input type="radio" name="gender" value="transgender">Transgender<br>
-                                <span class="checkmark"></span>
-                            </label>
-                        </div>
-                    </div>
-                </div>
-            </section>*@
-
-                        <!-- TAMAMLAMA -->
-                        <h4></h4>
-                        <section>
                             <div class="form-row">
-                                <h5>Tercihleriniz bana ulaşması için aşağıdaki tamam butonuna basınız, en kısa sürede dönüş yapacağım.</h5>
-
-                            </div>
-                            <div class="form-row">
-
                                 <label for="">
-                                    Notunuz:
+                                    Preferred System:
                                 </label>
                                 <div class="form-holder">
-                                    @*<textarea class="form-control" rows="10" placeholder="Seçiminizi yaptığınız işlemlerle ilgili not yazabilirsiniz."></textarea>*@
-                                    <input type="text" class="form-control" placeholder="Not">
+                                    <select name="" id="" class="form-control">
+                                        <option value="canvas" class="option">Canvas</option>
+                                        <option value="svg" class="option">Svg</option>
+                                    </select>
+                                    <i class="zmdi zmdi-caret-down"></i>
                                 </div>
+                            </div>
+                            <div class="form-row">
+                                <label for="">
+                                    College / Department:
+                                </label>
+                                <div class="form-holder">
+                                    <select name="" id="" class="form-control">
+                                        <option value="florida" class="option">University of Florida</option>
+                                        <option value="havard" class="option">University of Havard</option>
+                                        <option value="oxford" class="option">University of Oxford</option>
+                                    </select>
+                                    <i class="zmdi zmdi-caret-down"></i>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <label for="">
+                                    Term:
+                                </label>
+                                <div class="form-holder">
+                                    <select name="" id="" class="form-control">
+                                        <option value="" selected disabled>Select Term</option>
+                                        <option value="term 1" class="option">Term 1</option>
+                                        <option value="term 2" class="option">Term 2</option>
+                                        <option value="term 3" class="option">Term 3</option>
+                                    </select>
+                                    <i class="zmdi zmdi-caret-down"></i>
+                                </div>
+                            </div>*@
 
+                    </section>
+
+
+
+                    <!-- SİPARİŞ FORMU -->
+                    <h4></h4>
+                    <section>
+                        <div id="secildiKurabiye" style="display:none">
+                            <div class="form-row">
+                                <label for="">
+                                    Hamur Seçimi:
+                                </label>
+                                <div class="form-holder">
+                                    <select id="kurabiyeHamurSecimi" class="form-control">
+                                        <option value="zencefilli" class="option">Zencefilli</option>
+                                        <option value="tarcinli" class="option">Tarçınlı</option>
+                                        <option value="vanilyali" class="option">Vanilyalı</option>
+                                    </select>
+                                    <i class="zmdi zmdi-caret-down"></i>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <label for="">
+                                    Süsleme Seçimi:
+                                </label>
+                                <div class="form-holder">
+                                    <select id="kurabiyeSuslemeSecimi" class="form-control">
+                                        <option value="sekerbaski" class="option">Şeker Baskı</option>
+                                        <option value="royalicing" class="option">Royal Icing</option>
+                                        <option value="hikayekombini" class="option">Hikaye Kombini</option>
+                                    </select>
+                                    <i class="zmdi zmdi-caret-down"></i>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <label for="">
+                                    Adet (Mininum 20):
+                                </label>
+                                <div class="form-holder">
+                                    <input type="text" class="form-control" name="kurabiyeadet_" id="kurabiyeadet">
+                                </div>
                             </div><br />
-                        </section>
-                    }
-                    </div>
-            </form>
-        </div>
-    
-        <script src="~/Content/colorlib-wizard-4/js/jquery-3.3.1.min.js"></script>
+                        </div>
 
-        <!-- JQUERY STEP -->
-        <script src="~/Content/colorlib-wizard-4/js/jquery.steps.js"></script>
+                    </section>
 
-        <!-- DATE-PICKER -->
-        <script src="~/Content/colorlib-wizard-4/vendor/date-picker/js/datepicker.js"></script>
-        <script src="~/Content/colorlib-wizard-4/vendor/date-picker/js/datepicker.en.js"></script>
+                    <!-- SECTION 2 -->
+                    @*<h4></h4>
+                        <section id="pasta" visible="false">
+                            <div class="form-row">
+                                <label for="">
+                                    Date of Birth:
+                                </label>
+                                <div class="form-holder">
+                                    <input type="text" class="form-control datepicker-here" data-language='en' data-date-format="dd - mm - yyyy" id="dp1">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <label for="">
+                                    Country of Birth:
+                                </label>
+                                <div class="form-holder">
+                                    <select name="" id="" class="form-control">
+                                        <option value="united states" class="option">United States</option>
+                                        <option value="united kingdom" class="option">United Kingdom</option>
+                                        <option value="viet nam" class="option">Viet Nam</option>
+                                    </select>
+                                    <i class="zmdi zmdi-caret-down"></i>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <label for="">
+                                    Your Email:
+                                </label>
+                                <div class="form-holder">
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-row" style="margin-bottom: 3.4vh">
+                                <label for="">
+                                    Phone Number:
+                                </label>
+                                <div class="form-holder">
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-row" style="margin-bottom: 50px;">
+                                <label for="">
+                                    Gender:
+                                </label>
+                                <div class="form-holder">
+                                    <div class="checkbox-circle">
+                                        <label class="male">
+                                            <input type="radio" name="gender" value="male" checked> Male<br>
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="female">
+                                            <input type="radio" name="gender" value="female"> Female<br>
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="gender" value="transgender">Transgender<br>
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>*@
 
-        <script src="~/Content/colorlib-wizard-4/js/main.js"></script>
-        <!-- Template created and distributed by Colorlib -->
+                    <!-- TAMAMLAMA -->
+                    <h4></h4>
+                    <section>
+                        <div class="form-row">
+                            <h5>Tercihleriniz bana ulaşması için aşağıdaki tamam butonuna basınız, en kısa sürede dönüş yapacağım.</h5>
 
+                        </div>
+                        <div class="form-row">
 
+                            <label for="">
+                                Notunuz:
+                            </label>
+                            <div class="form-holder">
+                                @*<textarea class="form-control" rows="10" placeholder="Seçiminizi yaptığınız işlemlerle ilgili not yazabilirsiniz."></textarea>*@
+                                <input type="text" class="form-control" placeholder="Not" name="not">
+                            </div>
 
-        <script>
-            //$(document).ready(function () {
-            //    console.log("ready!");
-            //    swal(
-            //        'Başarılı!',
-            //        'En kısa sürede yanıt vereceğim.',
-            //        'success'
-            //    ).then(() => {
-            //        $(location).attr('href', '/Default');
-            //        });
-            //});
-
-            function tipDegisti() {
-                var x = document.getElementById("tipSecimi").value;
-                console.log(x);
-
-                if (x === 'pasta') {
-                    alert('Seçiminiz: ' + x);
+                        </div><br />
+                    </section>
                 }
-                else if (x === 'cupcake') {
-                    alert('Seçiminiz: ' + x);
-                }
-                else if (x === 'kurabiye') {
-                    var y = document.getElementById("secildiKurabiye");
-                    if (y.style.display === "none") {
-                        y.style.display = "block";
-                    } else {
-                        y.style.display = "none";
-                    }
+            </div>
+        </form>
+    </div>
 
+    <script src="~/Content/colorlib-wizard-4/js/jquery-3.3.1.min.js"></script>
+
+    <!-- JQUERY STEP -->
+    <script src="~/Content/colorlib-wizard-4/js/jquery.steps.js"></script>
+
+    <!-- DATE-PICKER -->
+    <script src="~/Content/colorlib-wizard-4/vendor/date-picker/js/datepicker.js"></script>
+    <script src="~/Content/colorlib-wizard-4/vendor/date-picker/js/datepicker.en.js"></script>
+
+    <script src="~/Content/colorlib-wizard-4/js/main.js"></script>
+    <!-- Template created and distributed by Colorlib -->
+
+
+
+
+    <script>
+
+        function AddToCart() {
+
+            var kurabiye = {
+                HamurSecimi: document.getElementById("kurabiyeHamurSecimi").value,
+                SuslemeSecimi: document.getElementById("kurabiyeSuslemeSecimi").value,
+                Kurabiye_Adet: parseInt(document.querySelector('input[name=kurabiyeadet_]').value)
+            };
+
+        var tmpObj = {
+        AdSoyad: document.querySelector('input[name=AdSoyad]').value,
+            TelefonNumarasi: document.querySelector('input[name=TelefonNumarasi]').value,
+            SiparisTuru: document.getElementById("tipSecimi").value,
+            Not: document.querySelector('input[name=not]').value,
+            kurabiye: kurabiye
+        };
+
+            var req = new XMLHttpRequest();
+            req.responseType = "json";
+            req.open('POST', '@Url.Action("AddOrder", "Default")', true);
+            req.setRequestHeader('Content-Type', 'application/json');
+            req.send(JSON.stringify(tmpObj));
+
+            req.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    if (this.response == 'Success!') { swal('Başarılı!', 'En kısa sürede yanıt vereceğim.', 'success').then(() => { location.reload(); }); }
+                    else { swal('Hata!', 'Bir Sorun Oluştu!', 'warning');  }
                 }
+            };
+}
+
+   //     function AddToCart(adsoyad, telefon) {
+   //         var data = {
+   //             adsoyad: 'adsdasdasd',
+   //             telefon: '12321321312321213'
+   //         };
+
+   //         $.ajax({
+   //             type: "GET",
+   //             url: "AddOrder",
+   //             content: "application/json;",
+   //             dataType: "json",
+   //             data: JSON.stringify(data),
+   //             success: function (d) {
+
+   //             },
+   //             error: function (xhr, textStatus, errorThrown) {
+
+   //             }
+   //         });
+   //}
+    </script>
+
+    <script>
+        //$(document).ready(function () {
+        //    console.log("ready!");
+        //    swal(
+        //        'Başarılı!',
+        //        'En kısa sürede yanıt vereceğim.',
+        //        'success'
+        //    ).then(() => {
+        //        $(location).attr('href', '/Default');
+        //        });
+        //});
+
+
+
+        function tipDegisti() {
+            var x = document.getElementById("tipSecimi").value;
+            console.log(x);
+
+            if (x === 'pasta') {
+                alert('Seçiminiz: ' + x);
             }
-        </script>
+            else if (x === 'cupcake') {
+                alert('Seçiminiz: ' + x);
+            }
+            else if (x === 'kurabiye') {
+                var y = document.getElementById("secildiKurabiye");
+                if (y.style.display === "none") {
+                    y.style.display = "block";
+                } else {
+                    y.style.display = "none";
+                }
 
-    </body>
+            }
+        }
+    </script>
+
+</body>
 </html>
