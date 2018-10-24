@@ -33,7 +33,6 @@ namespace pasta_siparis.Content.Helper
 
                     using (var message = new MailMessage(fromAddress, toAddress) { Subject = subject, Body = body })
                     {
-                        message.Bcc.Add(new MailAddress(toBccAddress));
                         smtp.Send(message);
                         rtr = true;
                     }
