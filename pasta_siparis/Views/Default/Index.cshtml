@@ -48,7 +48,7 @@
                                 Ad Soyad:
                             </label>
                             <div class="form-holder">
-                                <input type="text" class="form-control" name="AdSoyad">
+                                <input type="text" class="form-control" name="AdSoyad" id="AdSoyad">
                             </div>
                         </div>
                         <div class="form-row">
@@ -56,7 +56,7 @@
                                 Telefon Numarası:
                             </label>
                             <div class="form-holder">
-                                <input type="text" class="form-control" name="TelefonNumarasi">
+                                <input type="text" class="form-control" name="TelefonNumarasi" id="TelefonNumarasi">
                             </div>
                         </div>
                         <div class="form-row">
@@ -320,9 +320,9 @@
     <script>
 
         function AddToCart() {
-            var AdSoyad = document.getElementsByName("AdSoyad");
-            var Telefon = document.getElementsByName("TelefonNumarasi");
-            if (!AdSoyad || !AdSoyad === "" || !Telefon === "") {
+            var AdSoyad = document.getElementById("AdSoyad").value;
+            var Telefon = document.getElementById("TelefonNumarasi").value;
+            if (AdSoyad !== null && Telefon !== null && AdSoyad !== "" && Telefon !== "") {
                 var kurabiye = {
                     HamurSecimi: document.getElementById("kurabiyeHamurSecimi").value,
                     SuslemeSecimi: document.getElementById("kurabiyeSuslemeSecimi").value,
