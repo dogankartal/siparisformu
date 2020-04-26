@@ -76,13 +76,8 @@ namespace pasta_siparis.Controllers
                     //body.AppendLine("Süsleme Seçimi: " + GelenSiparis.Pasta.Susleme);
                 }
 
-                bildirim.MailFormSend(body.ToString(),"behiyebetul95@gmail.com");
-                bildirim.MailFormSend(body.ToString(), "dogankartal52@gmail.com");
-
-                //var smsBody = new StringBuilder();
-                //smsBody.AppendLine("Yeni bir " + GelenSiparis.SiparisTuru.ToUpper() + " siparişin var!");
-                //smsBody.AppendLine(" AD: " + GelenSiparis.AdSoyad);
-                //smsBody.AppendLine(" TEL: " + GelenSiparis.TelefonNumarasi);
+                bildirim.MailFormSend(body.ToString(),"dogankartal52@gmail.com");
+                bildirim.MailFormSend(body.ToString(), "behiyebetul95@gmail.com");
 
                 //bildirim.SendSMS(smsBody.ToString());
 

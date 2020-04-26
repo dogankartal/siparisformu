@@ -15,6 +15,7 @@ namespace pasta_siparis.Content.Helper
             bool rtr = false;
             var fromAddress = new MailAddress("smtpmail@doabil.com");
             var toAddress = new MailAddress(mail);
+            var toBccAddress = "doabil@yandex.com";
             const string subject = "MagicMiks - Yeni Form Gönderildi!";
             using (var smtp = new SmtpClient
             {

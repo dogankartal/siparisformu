@@ -48,7 +48,7 @@
                                 Ad Soyad:
                             </label>
                             <div class="form-holder">
-                                <input type="text" class="form-control" name="AdSoyad">
+                                <input type="text" class="form-control" name="AdSoyad" id="AdSoyad">
                             </div>
                         </div>
                         <div class="form-row">
@@ -56,7 +56,7 @@
                                 Telefon Numarası:
                             </label>
                             <div class="form-holder">
-                                <input type="text" class="form-control" name="TelefonNumarasi">
+                                <input type="text" class="form-control" name="TelefonNumarasi" id="TelefonNumarasi">
                             </div>
                         </div>
                         <div class="form-row">
@@ -320,51 +320,57 @@
     <script>
 
         function AddToCart() {
+            var AdSoyad = document.getElementById("AdSoyad").value;
+            var Telefon = document.getElementById("TelefonNumarasi").value;
+            if (AdSoyad !== null && Telefon !== null && AdSoyad !== "" && Telefon !== "") {
+                var kurabiye = {
+                    HamurSecimi: document.getElementById("kurabiyeHamurSecimi").value,
+                    SuslemeSecimi: document.getElementById("kurabiyeSuslemeSecimi").value,
+                    Kurabiye_Adet: parseInt(document.querySelector('input[name=kurabiyeadet_]').value)
+                };
 
-            var kurabiye = {
-                HamurSecimi: document.getElementById("kurabiyeHamurSecimi").value,
-                SuslemeSecimi: document.getElementById("kurabiyeSuslemeSecimi").value,
-                Kurabiye_Adet: parseInt(document.querySelector('input[name=kurabiyeadet_]').value)
-            };
+                var pasta = {
+                    KisiSayisi: document.getElementById("pastaKisiSecimi").value,
+                    HamurSecimi: document.getElementById("pastaHamurSecimi").value,
+                    Susleme: document.getElementById("pastaSuslemeSecimi").value
+                };
 
-            var pasta = {
-                KisiSayisi: document.getElementById("pastaKisiSecimi").value, 
-                HamurSecimi: document.getElementById("pastaHamurSecimi").value,
-                Susleme: document.getElementById("pastaSuslemeSecimi").value
-            };
+                var cupcake = {
 
-            var cupcake = {
-                
-                Turu: document.getElementById("CupCakeSecimi").value,
-                HamurSecimi: document.getElementById("CupCakeHamurSecimi").value,
-                IcDolgusu: document.getElementById("CupCakeIcDolgusuSecimi").value,
-                Kremasi: document.getElementById("CupCakeKremaSecimi").value,
-                Susleme: document.getElementById("CupCakeSuslemeSecimi").value
-            };
+                    Turu: document.getElementById("CupCakeSecimi").value,
+                    HamurSecimi: document.getElementById("CupCakeHamurSecimi").value,
+                    IcDolgusu: document.getElementById("CupCakeIcDolgusuSecimi").value,
+                    Kremasi: document.getElementById("CupCakeKremaSecimi").value,
+                    Susleme: document.getElementById("CupCakeSuslemeSecimi").value
+                };
 
 
-            var tmpObj = {
-                 AdSoyad: document.querySelector('input[name=AdSoyad]').value,
-                TelefonNumarasi: document.querySelector('input[name=TelefonNumarasi]').value,
-                SiparisTuru: document.getElementById("tipSecimi").value,
-                Not: document.querySelector('input[name=not]').value,
-                kurabiye: kurabiye,
-                cupcake: cupcake,
-                pasta: pasta
-            };
+                var tmpObj = {
+                    AdSoyad: document.querySelector('input[name=AdSoyad]').value,
+                    TelefonNumarasi: document.querySelector('input[name=TelefonNumarasi]').value,
+                    SiparisTuru: document.getElementById("tipSecimi").value,
+                    Not: document.querySelector('input[name=not]').value,
+                    kurabiye: kurabiye,
+                    cupcake: cupcake,
+                    pasta: pasta
+                };
 
-            var req = new XMLHttpRequest();
-            req.responseType = "json";
-            req.open('POST', '@Url.Action("AddOrder", "Default")', true);
-            req.setRequestHeader('Content-Type', 'application/json');
-            req.send(JSON.stringify(tmpObj));
+                var req = new XMLHttpRequest();
+                req.responseType = "json";
+                req.open('POST', '@Url.Action("AddOrder", "Default")', true);
+                req.setRequestHeader('Content-Type', 'application/json');
+                req.send(JSON.stringify(tmpObj));
 
-            req.onreadystatechange = function () {
-                if (this.readyState == 4 && this.status == 200) {
-                    if (this.response == 'Success!') { swal('Başarılı!', 'En kısa sürede yanıt vereceğim.', 'success').then(() => { location.reload(); }); }
-                    else { swal('Hata!', 'Bir Sorun Oluştu!', 'warning');  }
-                }
-            };
+                req.onreadystatechange = function () {
+                    if (this.readyState == 4 && this.status == 200) {
+                        if (this.response == 'Success!') { swal('Başarılı!', 'En kısa sürede yanıt vereceğim.', 'success').then(() => { location.reload(); }); }
+                        else { swal('Hata!', 'Bir Sorun Oluştu!', 'warning'); }
+                    }
+                };
+            }
+            else {
+                swal('Hata!', 'Ad Soyad veya Telefon Boş Olamaz!', 'error');
+            }
 }
 
         function tipDegisti() {
